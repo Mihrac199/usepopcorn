@@ -27,6 +27,7 @@ const tempMovieData = [
 
 ];
 
+
 const tempWatchedData = [
 
   {
