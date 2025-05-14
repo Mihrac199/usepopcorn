@@ -26,19 +26,21 @@ body {
 
   color: var(--color-text);
   background-color: var(--color-background-900);
-  padding: 2.4rem;
+  padding: 2.5rem;
 }
 
-/* ******* */
+
+
+
 
 .nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  height: 7.2rem;
+  height: 7rem;
   padding: 0 3.2rem;
   background-color: var(--color-primary);
-  border-radius: 0.9rem;
+  border-radius: 1rem;
 }
 
 .main {
@@ -72,7 +74,9 @@ body {
   padding: 4.8rem;
 }
 
-/* ******* */
+
+
+
 
 .logo {
   display: flex;
@@ -208,7 +212,9 @@ body {
   background-color: var(--color-red-dark);
 }
 
-/* ******* */
+
+
+
 
 .summary {
   padding: 2.2rem 3.2rem 1.8rem 3.2rem;
@@ -237,7 +243,9 @@ body {
   gap: 0.8rem;
 }
 
-/* ******* */
+
+
+
 
 .details {
   line-height: 1.4;

@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { KEY } from "./_config.js";
 import { Main, Box, Loader, ErrorMessage } from "./_element.js";
 import { NavBar, Logo, Search, NumResult } from "./NavBar.js";
 import { MovieList } from "./SearchMovieList.js";
 import { WatchedSummary, WatchedMovieList } from "./WatchedMovieList.js";
 import { MovieDetails } from "./MovieDetails.js";
+import { getSearchFetch } from "./_model.js";
 
 
 export default function App() {
@@ -25,63 +25,14 @@ export default function App() {
 
   useEffect(function () {
 
-    const controller = new AbortController();
-
-    async function fetchMovies() {
-
-      try {
-
-        setİsLoading(true);
-        setError("");
-
-        const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${query}`, { signal: controller.signal });
-
-        // Apı getting error message.
-        if (!res.ok) throw new Error("Something went wrong with fetching movies...");
-
-        const data = await res.json();
-
-        // Not movie result.
-        if (data.Response === "False") throw new Error("Movie not found...");
-
-        setMovies(data.Search);
-        setError("");
-
-      } catch (error) {
-
-        if (error.name !== "AbortError") {
-          setError(error.message);
-        };
-
-      } finally {
-
-        setİsLoading(false);
-
-      };
-
-      if (query.length < 3) {
-
-        setError("");
-        setMovies([]);
-
-      };
-
-    };
-
-    fetchMovies();
-
-    handleCloseMovie();
-
-    return function () {
-      controller.abort();
-    };
+    return getSearchFetch(setİsLoading, setError, query, setMovies, handleCloseMovie);
 
   }, [query]);
 
 
   useEffect(function () {
 
-    localStorage.setItem("watched", JSON.stringify(watched));
+    return localStorage.setItem("watched", JSON.stringify(watched));
 
   }, [watched]);
 

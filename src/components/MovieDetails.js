@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { KEY } from "./_config";
 import { Loader } from "./_element";
 import StarRating from "./StarRating";
+import { getMovieDetailsFetch } from "./_model";
 
 
 export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
@@ -23,23 +23,15 @@ export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }
 
 
      useEffect(function () {
+
           if (userRating) countRef.current++;
+
      }, [userRating]);
 
 
      useEffect(function () {
 
-          async function getMovieDetails() {
-               setİsLoading(true);
-
-               const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`);
-               const data = await res.json();
-               setMovie(data);
-
-               setİsLoading(false);
-          };
-
-          getMovieDetails();
+          getMovieDetailsFetch(setİsLoading, selectedId, setMovie);
 
      }, [selectedId]);
 
