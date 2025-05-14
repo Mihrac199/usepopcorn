@@ -3,7 +3,8 @@ import { KEY } from "./_config.js";
 import { Main, Box, Loader, ErrorMessage } from "./_element.js";
 import { NavBar, Logo, Search, NumResult } from "./NavBar.js";
 import { MovieList } from "./SearchMovieList.js";
-import { MovieDetails, WatchedSummary, WatchedMovieList } from "./WatchedMovieList.js";
+import { WatchedSummary, WatchedMovieList } from "./WatchedMovieList.js";
+import { MovieDetails } from "./MovieDetails.js";
 
 
 export default function App() {
