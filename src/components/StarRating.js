@@ -1,7 +1,6 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import { containerStyle, starContainerStyle } from "./_config";
-
+import { useState } from "react"
+import PropTypes from "prop-types"
+import { containerStyle, starContainerStyle } from "./_config"
 
 StarRating.propTypes = {
      maxRating: PropTypes.number,
@@ -12,7 +11,6 @@ StarRating.propTypes = {
      className: PropTypes.string,
      onSetRating: PropTypes.func
 };
-
 
 export default function StarRating({
      maxRating = 5,
@@ -82,7 +80,6 @@ export default function StarRating({
      );
 
 };
-
 
 function Star({
      onRate,

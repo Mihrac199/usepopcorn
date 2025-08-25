@@ -1,5 +1,4 @@
-import { useState } from "react";
-
+import { useState } from "react"
 
 export function Box({ children }) {
 
@@ -24,7 +23,6 @@ export function Box({ children }) {
 
 };
 
-
 export function Main({ children }) {
 
      return (
@@ -35,7 +33,6 @@ export function Main({ children }) {
 
 };
 
-
 export function Loader() {
 
      return (
@@ -45,7 +42,6 @@ export function Loader() {
      );
 
 };
-
 
 export function ErrorMessage({ message }) {
 

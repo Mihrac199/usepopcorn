@@ -1,5 +1,4 @@
-import { average } from "./_config";
-
+import { average } from "./_config"
 
 export function WatchedSummary({ watched }) {
 
@@ -45,7 +44,6 @@ export function WatchedSummary({ watched }) {
 
 };
 
-
 export function WatchedMovieList({ watched, onDeleteWatched }) {
 
      return (
@@ -63,7 +61,6 @@ export function WatchedMovieList({ watched, onDeleteWatched }) {
      );
 
 };
-
 
 function WatchedMovie({ movie, onDeleteWatched }) {
 

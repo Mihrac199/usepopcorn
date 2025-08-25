@@ -1,3 +1,9 @@
-# Movie Project (React)
+# Movie Project
 
-Find the films you've seen and rate them.
+Used Technologies;
+
+     1) CSS 3
+     2) REACT
+          - Create React App
+     3) Rest API
+     4) Local Storage

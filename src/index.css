@@ -29,10 +29,6 @@ body {
   padding: 2.5rem;
 }
 
-
-
-
-
 .nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -74,10 +70,6 @@ body {
   padding: 4.8rem;
 }
 
-
-
-
-
 .logo {
   display: flex;
   align-items: center;
@@ -104,7 +96,6 @@ body {
   transition: all 0.3s;
   color: var(--color-text);
 
-  /* background-color: var(--color-background-900); */
   background-color: var(--color-primary-light);
 }
 
@@ -212,10 +203,6 @@ body {
   background-color: var(--color-red-dark);
 }
 
-
-
-
-
 .summary {
   padding: 2.2rem 3.2rem 1.8rem 3.2rem;
   border-radius: 0.9rem;
@@ -242,10 +229,6 @@ body {
   align-items: center;
   gap: 0.8rem;
 }
-
-
-
-
 
 .details {
   line-height: 1.4;
@@ -347,12 +330,3 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-
-/*
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
-
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
-*/

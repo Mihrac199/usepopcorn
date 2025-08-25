@@ -16,7 +16,6 @@ export function MovieList({ movies, onSelectMovie }) {
 
 };
 
-
 function Movie({ movie, onSelectMovie }) {
 
      return (

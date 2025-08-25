@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import { Loader } from "./_element";
-import StarRating from "./StarRating";
-import { getMovieDetailsFetch } from "./_model";
-
+import { useState, useEffect, useRef } from "react"
+import { Loader } from "./_element"
+import StarRating from "./StarRating"
+import { getMovieDetailsFetch } from "./_model"
 
 export function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
 

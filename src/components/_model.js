@@ -1,7 +1,5 @@
-import { KEY } from "./_config";
+import { KEY } from "./_config"
 
-
-// Get Search Movie
 export function getSearchFetch(setİsLoading, setError, query, setMovies, handleCloseMovie) {
 
      const controller = new AbortController();
@@ -16,12 +14,10 @@ export function getSearchFetch(setİsLoading, setError, query, setMovies, handle
 
                const res = await fetch(`http://www.omdbapi.com/?apikey=${KEY}&s=${query}`, { signal: controller.signal });
 
-               // Apı getting error message.
                if (!res.ok) throw new Error("Something went wrong with fetching movies...");
 
                const data = await res.json();
 
-               // Not movie result.
                if (data.Response === "False") throw new Error("Movie not found...");
 
                setMovies(data.Search);
@@ -64,8 +60,6 @@ export function getSearchFetch(setİsLoading, setError, query, setMovies, handle
 
 };
 
-
-// Get Movie Deetails
 export function getMovieDetailsFetch(setİsLoading, selectedId, setMovie) {
 
      async function getMovieDetails() {

@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import { Main, Box, Loader, ErrorMessage } from "./_element.js";
-import { NavBar, Logo, Search, NumResult } from "./NavBar.js";
-import { MovieList } from "./SearchMovieList.js";
-import { WatchedSummary, WatchedMovieList } from "./WatchedMovieList.js";
-import { MovieDetails } from "./MovieDetails.js";
-import { getSearchFetch } from "./_model.js";
-
+import { useEffect, useState } from "react"
+import { Main, Box, Loader, ErrorMessage } from "./_element.js"
+import { NavBar, Logo, Search, NumResult } from "./NavBar.js"
+import { MovieList } from "./SearchMovieList.js"
+import { WatchedSummary, WatchedMovieList } from "./WatchedMovieList.js"
+import { MovieDetails } from "./MovieDetails.js"
+import { getSearchFetch } from "./_model.js"
 
 export default function App() {
 
@@ -15,7 +14,6 @@ export default function App() {
   const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);
 
-  // const [watched, setWatched] = useState([]);
   const [watched, setWatched] = useState(function () {
 
     const storedValue = localStorage.getItem("watched");

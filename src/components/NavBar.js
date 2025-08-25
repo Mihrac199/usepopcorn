@@ -1,5 +1,4 @@
-import { useEffect, useRef } from "react";
-
+import { useEffect, useRef } from "react"
 
 export function NavBar({ children }) {
 
@@ -10,7 +9,6 @@ export function NavBar({ children }) {
      );
 
 };
-
 
 export function Logo() {
 
@@ -26,7 +24,6 @@ export function Logo() {
      );
 
 };
-
 
 export function Search({ query, setQuery }) {
 
@@ -71,7 +68,6 @@ export function Search({ query, setQuery }) {
      );
 
 };
-
 
 export function NumResult({ movies }) {
 
